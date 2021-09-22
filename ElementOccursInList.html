@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>element Occure In the List</title>
+</head>
+
+<body>
+    <!-- Write a function that checks whether an element occurs in a list. -->
+
+    <input type="number" id="input">
+    <button id="btn">check the number</button>
+    <script>
+        var array = [10, 45, 205, 95, 7, 38]
+        var btn = document.getElementById('btn');
+        function check() {
+            var input = document.getElementById('input').value;
+            var flag = 1;
+            for (i = 0; i <= array.length - 1; i++) {
+                if (input == array[i]) {
+                    flag = 0;
+                }
+
+            }
+            if (flag == 0) {
+                document.write(` ${input} is found in array`, "<br>");
+            }
+            else if (flag == 1) {
+                document.write(`${input} is not found in array`, "<br>");
+            }
+
+
+        }
+        btn.addEventListener('click', check);
+
+        // var d = array.includes(7);
+        // document.write(`position element in array: ${array.indexOf(7)}`, "<br>");
+        // document.write(` checking element using  array.includes(): ${d}`, "<br>");
+
+    </script>
+</body>
+
+</html>
